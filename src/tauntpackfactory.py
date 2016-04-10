@@ -6,6 +6,11 @@ from src.taunt import Taunt
 class TauntPackFactory:
 
     def create(self, path: str) -> TauntPack:
+        """
+        Create a new tauntpack
+        :param path: The directory containing all the taunts and the config.yml
+        :return: The tauntpack with all the taunts
+        """
 
         if (path == ""):
             raise Exception("Path may not be empty")

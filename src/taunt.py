@@ -3,10 +3,31 @@ import re, os.path
 class Taunt:
 
     name = ""
+    """
+    The name of the taunt
+    :type str
+    """
+
     regex = ""
+    """
+    The regex to match in the message
+    :type str
+    """
+
     path = ""
+    """
+    The path of the audio file
+    :type str
+    """
 
     def __init__(self, name: str, regex: str, path: str):
+
+        """
+
+        :param name:  The name of the taunt
+        :param regex: The regex of the taunt
+        :param path: The path to the audio file
+        """
 
         if(name == ""):
             raise Exception("Name may not be empty")

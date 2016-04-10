@@ -3,10 +3,29 @@ from src.taunt import Taunt
 class TauntPack:
 
     name = ""
+    """
+    The Name of the tauntpack
+    :type str
+    """
+
     description = ""
+    """
+    The description of the tauntpack
+    :type str
+    """
+
     taunts = []
+    """
+    The taunts in this tountpack
+    :type List[Taunt]
+    """
 
     def __init__(self, name: str, description: str):
+        """
+
+        :param name: The name of the tauntpack
+        :param description: The description of the tauntpack
+        """
 
         if(name == ""):
             raise Exception("Name may not be empty")
