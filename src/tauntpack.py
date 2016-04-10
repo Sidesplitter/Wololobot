@@ -1,13 +1,12 @@
-import os
+from src.taunt import Taunt
 
 class TauntPack:
 
     name = ""
     description = ""
     taunts = []
-    path = ""
 
-    def __init__(self, name: str, description: str, path: str):
+    def __init__(self, name: str, description: str):
 
         if(name == ""):
             raise Exception("Name may not be empty")
@@ -15,21 +14,11 @@ class TauntPack:
         if(description == ""):
             raise Exception("Description may not be empty")
 
-        if(path == ""):
-            raise Exception("Path may not be empty")
-
-        if(os.path.isdir(path) == False):
-            raise Exception("Directory does not exist")
-
-        if(os.path.isfile(path + "/config.ini") == False):
-            raise Exception("Directory does not contain a config.ini")
-
         self.name = name
         self.description = description
-        self.path = path
 
 
-    def findMatch(self, message: str):
+    def findMatch(self, message: str) -> Taunt or None:
 
         """
 
