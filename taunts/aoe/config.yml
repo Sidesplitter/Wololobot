@@ -22,7 +22,7 @@ taunts:
 
   - name: Gold, please
     regex: (?i)gold\s?,?\s?please
-    path: audio/05 Gold, please.wav
+    path: audio/05 Gold, PLease.wav
 
   - name: Stone
     regex: (?i)stone\s?,?\s?please
