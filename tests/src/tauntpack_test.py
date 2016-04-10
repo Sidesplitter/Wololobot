@@ -26,8 +26,8 @@ class TauntPackTest(unittest.TestCase):
 
         tauntPack = TauntPack("Name", "Description")
 
-        taunt1 = Taunt("Name", "[0-9]", "tauntpacktest.py")
-        taunt2 = Taunt("Name 2", "Test", "tauntpacktest.py")
+        taunt1 = Taunt("Name", "[0-9]", __file__)
+        taunt2 = Taunt("Name 2", "Test", __file__)
 
         tauntPack.taunts.append(taunt1)
         tauntPack.taunts.append(taunt2)

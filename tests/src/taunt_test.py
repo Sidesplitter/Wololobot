@@ -22,20 +22,20 @@ class TestTaunt(unittest.TestCase):
 
     def test_pathInvalid(self):
 
-        with self.assertRaisesRegex(Exception, "Soundfile does not exist"):
+        with self.assertRaisesRegex(Exception, "Soundfile path/that/does/not/exist does not exist"):
             Taunt("Name", '"test"', "path/that/does/not/exist")
 
     def test_correctConstructor(self):
 
-        taunt = Taunt("Name", "[0-9]", "taunttest.py")
+        taunt = Taunt("Name", "[0-9]", __file__)
 
         self.assertEqual("Name", taunt.name)
         self.assertEqual("[0-9]", taunt.regex)
-        self.assertEqual("taunttest.py", taunt.path)
+        self.assertEqual(__file__, taunt.path)
 
     def test_matches(self):
 
-        taunt = Taunt("Name", "[0-9]", "taunttest.py")
+        taunt = Taunt("Name", "[0-9]", __file__)
 
         self.assertFalse(taunt.matches("a"))
         self.assertTrue(taunt.matches("1"))
