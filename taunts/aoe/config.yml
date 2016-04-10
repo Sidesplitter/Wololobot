@@ -1,0 +1,179 @@
+general:
+  name: AoE Taunt pack
+  description: Adds taunts from AoE II
+
+taunts:
+  - name: Yes
+    regex: (?i)yes
+    path: audio/01 Yes.wav
+
+  # Needs words boundaries as no might be in other words
+  - name: No
+    regex: (?i)\bno\b
+    path: audio/02 No.wav
+
+  - name: Food, please
+    regex: (?i)food\s?,?\s?please
+    path: audio/03 Food, please.wav
+
+  - name: Wood, please
+    regex: (?i)wood\s?,?\s?please
+    path: audio/04 Wood, please.wav
+
+  - name: Gold, please
+    regex: (?i)gold\s?,?\s?please
+    path: audio/05 Gold, please.wav
+
+  - name: Stone
+    regex: (?i)stone\s?,?\s?please
+    path: audio/06 Stone, please.wav
+
+  #Matches any number of a's and h's combined, also needs word boundaries as it might be in other words
+  - name: Ahh
+    regex: (?i)\ba+h+\b
+    path: audio/07 Ahh.wav
+
+  - name: All hail
+    regex: (?i)\ball hail\b
+    path: audio/08 All hail.wav
+
+  #Matches any number of o's and h's combined, also needs word boundaries as it might be in other words
+  - name: Oooh
+    regex: (?i)\bo+h+\b
+    path: audio/09 Oooh.wav
+
+  - name: Back to age one
+    regex: (?i)back to Age (one|1)
+    path: audio/10 Back to Age 1.wav
+
+  - name: Herb laugh
+    regex: (?i)herb laugh
+    path: audio/11 Herb laugh.wav
+
+  - name: Being rushed
+    regex: (?i)being rushed
+    path: audio/12 Being rushed.wav
+
+  - name: Blame your ISP
+    regex: (?i)blame (it )?on your isp
+    path: audio/13 Blame your isp.wav
+
+  - name: Start the game
+    regex: (?i)start the game
+    path: audio/14 Start the game.wav
+
+  - name: Don't point that Thing
+    regex: (?i)don(')?t point that thing
+    path: audio/15 Don't Point That Thing.wav
+
+  - name: Enemy sighted
+    regex: (?i)enemy sighted
+    path: audio/16 Enemy Sighted.wav
+
+  - name: It Is Good
+    regex: (?i)it('s| is) good
+    path: audio/17 It Is Good.wav
+
+  - name: I Need A monk
+    regex: (?i)i need a munk
+    path: audio/18 I Need a Monk.wav
+
+  - name: Long Time No Siege
+    regex: (?i)long time no siege
+    path: audio/19 Long Time No Siege.wav
+
+  - name: My Granny
+    regex: (?i)my granny
+    path: audio/20 My granny.wav
+
+  - name: Nice Town, I'll take it
+    regex: (?i)nice town
+    path: audio/21 Nice Town I'll Take It.wav
+
+  - name: Quit Touchin'
+    regex: (?i)quit touchin('|g)
+    path: audio/22 Quit Touchin.wav
+
+  - name: Raiding Party
+    regex: (?i)raiding party
+    path: audio/23 Raiding Party.wav
+
+  - name: Raiding Party
+    regex: (?i)raiding party
+    path: audio/23 Raiding Party.wav
+
+  - name: Dadgum'
+    regex: (?i)dadgum
+    path: audio/24 Dadgum.wav
+
+  - name: Smite me
+    regex: (?i)smite me
+    path: audio/25 Smite Me.wav
+
+  - name: The wonder
+    regex: (?i)the wonder
+    path: audio/26 The wonder.wav
+
+  - name: You play two hours
+    regex: (?i)you play (two|2) hours
+    path: audio/27 You play 2 hours.wav
+
+  - name: You Should See the Other Guy
+    regex: (?i)you should see the other guy
+    path: audio/28 You Should See the Other Guy.wav
+
+  - name: Roggan
+    regex: (?i)roggan
+    path: audio/29 Roggan.wav
+
+  - name: Wololo
+    regex: (?i)wololo
+    path: audio/30 Wololo.wav
+
+  - name: Attack an Enemy Now
+    regex: (?i)attack an enemy now
+    path: audio/31 Attack an Enemy Now.wav
+
+  - name: Cease Creating Extra Villages
+    regex: (?i)cease creating extra villagers
+    path: audio/32 Cease Creating Extra Villagers.wav
+
+  - name: Create Extra Villages
+    regex: (?i)create extra villagers
+    path: audio/33 Create Extra Villagers.wav
+
+  - name: Build a Navy
+    regex: (?i)build a navy
+    path: audio/34 Build a Navy.wav
+
+  - name: Stop Building a Navy
+    regex: (?i)stop building a navy
+    path: audio/35 Stop Building a Navy.wav
+
+  - name: Wait for My Signal to Attack
+    regex: (?i)wait for my signal to attack
+    path: audio/36 Wait for My Signal to Attack.wav
+
+  - name: Build a Wonder
+    regex: (?i)build a Wonder
+    path: audio/37 Build a Wonder.wav
+
+  - name: Give Me Your Extra Resources
+    regex: (?i)give me your extra resources
+    path: audio/38 Give Me Your Extra Resources.wav
+
+  - name: Ally
+    regex: (?i)ally
+    path: audio/39 Ally.wav
+
+  - name: Enemy
+    regex: (?i)enemy
+    path: audio/40 Enemy.wav
+
+  - name: Neutral
+    regex: (?i)neutral
+    path: audio/41 Neutral.wav
+
+  - name: What Age  Are You In
+    regex: (?i)what age are you in
+    path: audio/42 What Age Are You In.wav

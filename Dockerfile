@@ -1,7 +1,7 @@
 FROM python:3.5
 
 #Install dependencies
-RUN apt-get install libffi-dev -y
+RUN apt-get install libffi-dev libyaml-dev -y
 
 #Add files
 ADD . /wololobot

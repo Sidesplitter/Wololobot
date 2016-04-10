@@ -16,9 +16,10 @@ class TauntPack:
 
         self.name = name
         self.description = description
+        self.taunts = []
 
 
-    def findMatch(self, message: str) -> Taunt or None:
+    def findMatch(self, message: str) -> Taunt:
 
         """
 

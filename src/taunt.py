@@ -20,7 +20,7 @@ class Taunt:
             raise Exception("Regex string is invalid")
 
         if(os.path.isfile(path) == False):
-            raise Exception("Soundfile does not exist")
+            raise Exception("Soundfile {file} does not exist".format(file = path))
 
         self.name = name
         self.regex = regex

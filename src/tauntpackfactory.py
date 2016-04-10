@@ -1,4 +1,4 @@
-import os, logging, sys
+import os, logging, sys, yaml
 
 from src.tauntpack import TauntPack
 from src.taunt import Taunt
@@ -10,40 +10,34 @@ class TauntPackFactory:
         if (path == ""):
             raise Exception("Path may not be empty")
 
-        if (os.path.isfile(path) == False):
-            raise Exception("Directory does not contain a config.ini")
+        if (os.path.isfile(path + "/config.yml") == False):
+            raise Exception("Directory does not contain a config.yml")
 
-        #Read configuration
-        import configparser
-        config = configparser.ConfigParser()
-        config.read(path)
+        file = open(path + "/config.yml")
+        config = yaml.safe_load(file)
+        file.close()
 
         #Create the Tauntpack
         tauntPack = TauntPack(
-            config["General"]["Name"],
-            config["General"]["Description"]
+            config["general"]["name"],
+            config["general"]["description"]
         )
 
-        for key in config["Taunts"]:
+        for tauntElem in config["taunts"]:
 
             try:
-                #Split the config
-                regex, path = config["Taunts"][key].split(",")
-
-
                 taunt = Taunt(
-                    key,
-                    regex,
-                    path
+                    tauntElem["name"],
+                    tauntElem["regex"],
+                    path + "/" + tauntElem["path"]
                 )
 
                 tauntPack.taunts.append(taunt)
 
-            except:
+            except Exception as e:
 
-                e = sys.exc_info()[0]
-                logging.error(
-                    "Error while adding taunt {taunt}: {error}".format(taunt = key, error =e )
+                logging.exception(
+                    "Error while adding taunt {taunt}".format(taunt = tauntElem["name"])
                 )
 
         return tauntPack
