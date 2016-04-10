@@ -32,4 +32,4 @@ class Taunt:
         :param message: The message to check
         :return: True if the taunt is matched in the message, false if not
         """
-        return re.match(self.regex, self.regex) != None
+        return re.match(self.regex, message) != None
