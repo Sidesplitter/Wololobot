@@ -1,0 +1,8 @@
+general:
+  name: HPO Taunt pack
+  description: Taunts carefully selected by the HPO group.
+
+taunts:
+  - name: nice
+    regex: (?i)nice
+    path: audio/nice.wav
