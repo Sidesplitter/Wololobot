@@ -3,6 +3,8 @@ import os, logging, sys, yaml
 from src.tauntpack import TauntPack
 from src.taunt import Taunt
 
+log = logging.getLogger(__name__)
+
 class TauntPackFactory:
 
     def create(self, path: str) -> TauntPack:
@@ -16,7 +18,7 @@ class TauntPackFactory:
             raise Exception("Path may not be empty")
 
         if (os.path.isfile(path + "/config.yml") == False):
-            raise Exception("Directory does not contain a config.yml")
+            raise Exception("Directory {dir} does not contain a config.yml".format(dir=path))
 
         file = open(path + "/config.yml")
         config = yaml.safe_load(file)
@@ -41,8 +43,8 @@ class TauntPackFactory:
 
             except Exception as e:
 
-                logging.exception(
-                    "Error while adding taunt {taunt}".format(taunt = tauntElem["name"])
+                log.error(
+                    "Error while adding taunt {taunt}".format(taunt = tauntElem["name"], exec_info = True)
                 )
 
         return tauntPack
