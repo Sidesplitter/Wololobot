@@ -3,12 +3,12 @@ general:
   description: Adds taunts from AoE II
 
 taunts:
-  - name: Yes
+  - name: 'Yes'
     regex: (?i)yes
     path: audio/01 Yes.wav
 
   # Needs words boundaries as no might be in other words
-  - name: No
+  - name: 'No'
     regex: (?i)\bno\b
     path: audio/02 No.wav
 
