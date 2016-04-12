@@ -11,6 +11,8 @@ class Bot(discord.Client):
     :type list[TauntPack]
     """
 
+    voice = None
+
     def __init__(self, **options):
 
         super().__init__(**options)
@@ -34,6 +36,7 @@ class Bot(discord.Client):
         :param message: The message
         :return:
         """
+
         for tauntPack in self.tauntPacks:
 
             taunt = tauntPack.findMatch(message.content)
@@ -45,6 +48,15 @@ class Bot(discord.Client):
                     pack=tauntPack.name,
                     user=message.author
                 ))
-                break
+
+                channel = message.author.voice_channel
+
+                if(self.voice == None):
+                    self.voice = await self.join_voice_channel(channel)
+
+                player = self.voice.create_ffmpeg_player(taunt.path)
+                player.start()
+
+
 
 
