@@ -13,19 +13,19 @@ taunts:
     path: audio/02 No.wav
 
   - name: Food, please
-    regex: (?i)food\s?,?\s?please
+    regex: (?i)food\s?,?\s?(please|pls|plz)
     path: audio/03 Food, please.wav
 
   - name: Wood, please
-    regex: (?i)wood\s?,?\s?please
+    regex: (?i)wood\s?,?\s?(please|pls|plz)
     path: audio/04 Wood, please.wav
 
   - name: Gold, please
-    regex: (?i)gold\s?,?\s?please
+    regex: (?i)gold\s?,?\s?(please|pls|plz)
     path: audio/05 Gold, PLease.wav
 
   - name: Stone
-    regex: (?i)stone\s?,?\s?please
+    regex: (?i)stone\s?,?\s?(please|pls|plz)
     path: audio/06 Stone, please.wav
 
   #Matches any number of a's and h's combined, also needs word boundaries as it might be in other words
@@ -91,7 +91,7 @@ taunts:
     path: audio/21 Nice Town I'll Take It.wav
 
   - name: Quit Touchin'
-    regex: (?i)quit touchin('|g)
+    regex: (?i)quit touchin('|g)?
     path: audio/22 Quit Touchin.wav
 
   - name: Raiding Party
@@ -122,8 +122,8 @@ taunts:
     regex: (?i)you should see the other guy
     path: audio/28 You Should See the Other Guy.wav
 
-  - name: Roggan
-    regex: (?i)roggan
+  - name: Rogan
+    regex: (?i)rog(g?)an
     path: audio/29 Roggan.wav
 
   - name: Wololo
@@ -134,11 +134,11 @@ taunts:
     regex: (?i)attack an enemy now
     path: audio/31 Attack an Enemy Now.wav
 
-  - name: Cease Creating Extra Villages
+  - name: Cease Creating Extra Villagers
     regex: (?i)cease creating extra villagers
     path: audio/32 Cease Creating Extra Villagers.wav
 
-  - name: Create Extra Villages
+  - name: Create Extra Villagers
     regex: (?i)create extra villagers
     path: audio/33 Create Extra Villagers.wav
 
