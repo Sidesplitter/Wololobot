@@ -75,7 +75,7 @@ taunts:
     path: audio/17 It Is Good.wav
 
   - name: I Need A monk
-    regex: (?i)i need a munk
+    regex: (?i)i need a monk
     path: audio/18 I Need a Monk.wav
 
   - name: Long Time No Siege

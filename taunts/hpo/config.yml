@@ -3,6 +3,15 @@ general:
   description: Taunts carefully selected by the HPO group.
 
 taunts:
-  - name: nice
-    regex: (?i)nice
+  - name: Nice
+    regex: (?i)n(o)?ice
     path: audio/nice.wav
+  - name: Huh
+    regex: (?i)\bhu+h+\b
+    path: audio/huh.wav
+  - name: What's Heavier
+    regex: (?i)what(s| is|'s) heavier
+    path: audio/whats_heavier.wav
+  - name: Wow
+    regex: (?i)w(o+|au)w
+    path: audio/wow.wav
