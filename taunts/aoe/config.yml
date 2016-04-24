@@ -14,7 +14,7 @@ taunts:
 
   - name: Food, please
     regex: (?i)food\s?,?\s?(please|pls|plz)
-    path: audio/03 Food, please.wavk
+    path: audio/03 Food, please.wav
 
   - name: Wood, please
     regex: (?i)wood\s?,?\s?(please|pls|plz)
