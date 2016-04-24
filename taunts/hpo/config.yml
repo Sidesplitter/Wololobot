@@ -6,12 +6,19 @@ taunts:
   - name: Nice
     regex: (?i)n(o)?ice
     path: audio/nice.wav
+
   - name: Huh
     regex: (?i)\bhu+h+\b
     path: audio/huh.wav
+
   - name: What's Heavier
     regex: (?i)what(s| is|'s) heavier
     path: audio/whats_heavier.wav
+
   - name: Wow
     regex: (?i)w(o+|au)w
     path: audio/wow.wav
+
+  - name: Koeman
+    regex: (?i)koeman
+    path: audio/koeman.wav

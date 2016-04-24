@@ -9,12 +9,12 @@ taunts:
 
   # Needs words boundaries as no might be in other words
   - name: 'No'
-    regex: (?i)\bno\b
+    regex: (?i)\bno+\b
     path: audio/02 No.wav
 
   - name: Food, please
     regex: (?i)food\s?,?\s?(please|pls|plz)
-    path: audio/03 Food, please.wav
+    path: audio/03 Food, please.wavk
 
   - name: Wood, please
     regex: (?i)wood\s?,?\s?(please|pls|plz)
